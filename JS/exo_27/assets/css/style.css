@@ -1,57 +1,57 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#pokemon-search {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#pokemon-search input {
-    margin-right: 10px;
-}
-
-#pokemon-display {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    background-color: #ffffff;
-    max-width: 400px;
-}
-
-#pokemon-display img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
-#pokemon-display span {
-    display: block;
-    margin-bottom: 10px;
-}
-
-#pokemon-types, #pokemon-abilities {
-    list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
-#pokemon-types li, #pokemon-abilities li {
-    display: inline-block;
-    margin: 5px;
-    padding: 5px 10px;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    background-color: #e9ecef;
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+    margin: 0.5rem 0;
+}
+
+header form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+header form input {
+    margin-right: 0.5rem;
+}
+
+main.container {
+    padding: 2rem;
+}
+
+#pokemon-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#pokemon-container img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+#pokemon-container span,
+#pokemon-container ul {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+#pokemon-generation-list .card {
+    margin: 0.5rem;
+    text-align: center;
 }
 
 button {
-    margin: 10px;
+    margin: 0.5rem;
 }
