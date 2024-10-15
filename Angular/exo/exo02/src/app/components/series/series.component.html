@@ -1,0 +1,9 @@
+<ul *ngIf="seriesList.length > 0; else noSeries">
+  <li *ngFor="let series of seriesList">
+    <h2>{{ series.name }}</h2>
+    <p>{{ series.description }}</p>
+  </li>
+</ul>
+<ng-template #noSeries>
+  <p>No series available.</p>
+</ng-template>
