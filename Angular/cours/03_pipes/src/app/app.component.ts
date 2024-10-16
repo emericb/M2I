@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {NavbarComponent} from './components/navbar/navbar.component';
-import {OrderByPipe} from './pipes/order-by.pipe';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, OrderByPipe],
+  imports: [RouterOutlet, PipesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'exo02';
+  title = '03_pipes';
 }

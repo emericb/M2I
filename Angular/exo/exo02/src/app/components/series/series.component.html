@@ -1,9 +1,13 @@
-<ul *ngIf="seriesList.length > 0; else noSeries">
-  <li *ngFor="let series of seriesList">
-    <h2>{{ series.name }}</h2>
-    <p>{{ series.description }}</p>
-  </li>
-</ul>
-<ng-template #noSeries>
-  <p>No series available.</p>
-</ng-template>
+<div class="p-4">
+  <div class="mb-4">
+    <button (click)="setOrder('asc')" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Sort Ascending</button>
+    <button (click)="setOrder('desc')" class="bg-blue-500 text-white px-4 py-2 rounded">Sort Descending</button>
+  </div>
+  <ul class="list-disc pl-5">
+    <li *ngFor="let series of seriesList | orderBy: order; let i = index" class="mb-2">
+      <span class="font-bold">{{ series.name }}</span> - {{ series.description }}
+      <button (click)="deleteSeries(i)" class="bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button>
+    </li>
+  </ul>
+  <p *ngIf="seriesList.length === 0" class="text-gray-500">No series available.</p>
+</div>
