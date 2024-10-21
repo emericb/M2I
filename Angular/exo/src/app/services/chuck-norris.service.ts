@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Joke} from '../utils/types/joke';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class ChuckNorrisService {
 
   constructor(private http: HttpClient) { }
 
-  getRandomJoke() : Observable<any> {
-    return this.http.get<any>(this.API_URL);
+  getRandomJoke() : Observable<Joke> {
+    return this.http.get<Joke>(this.API_URL);
   }
 }
